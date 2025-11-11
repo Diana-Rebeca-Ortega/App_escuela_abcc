@@ -2,8 +2,8 @@
     class ConexionBDUsuarios{
         private $conexion;
         private $host = "localhost:3306";
-        private $usuario = "salvatore";
-        private $password = "salvatore";
+        private $usuario = "dianita";
+        private $password = "dianita";
         private $bd = "BD_Usuarios_Escuela_Web_2025";
         
         public function __construct(){

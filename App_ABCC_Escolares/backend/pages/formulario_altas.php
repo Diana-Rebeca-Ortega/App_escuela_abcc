@@ -1,3 +1,7 @@
+<?php
+session_start(); 
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -51,23 +55,20 @@
                 placeholder="Solo numeros"
 
                 value="<?php echo isset($_SESSION['nc'])? 
-                $_SESSION['nc']:'' ?>";
+                $_SESSION['nc']:''; ?>"
                 />
                 <div style="color: <?php echo isset($_SESSION['nc'])? 
-                'red':'black'
-                $_SESSION['nc']:'' ?>">
-                    <?php echo isset($_SESSION['nc'])?  'Debes ingesar solo numeros'.
-                $_SESSION['nc']:'' ?>";
-                   
-                </div>
+                'red':'black'; ?>">
+                    <?php echo isset($_SESSION['nc'])?  'Debes ingesar solo numeros':
+                ''; ?> </div>
             </div>
             <div class="mb-3">
                 <label for="caja_nombre" class="form-label">Nombre: </label>
                 <input type="text" class="form-control" id="caja_nombre"
                     name="caja_nombre"
                     value="<?php echo isset($_SESSION['n'])? 
-                $_SESSION['n']:'' ?>";
-                >
+                $_SESSION['n']:''; ?>"
+                />
             </div>
             <div class="mb-3">
                 <label for="caja_primer_ap" class="form-label">Primer Ap: </label>
@@ -122,10 +123,11 @@
 
 </html>
 
-<?php
 
- unset($_SESSION['inserccion correcta']);
+
+<?php
+// Usas 'insercion_correcta' arriba, y 'nc' en los campos.
+unset($_SESSION['insercion_correcta']); 
 unset($_SESSION['nc']);
-unset($_SESSION['nc']);
-unset($_SESSION['nc']);
+unset($_SESSION['n']); // Asumiendo que también quieres limpiar la variable del nombre
 ?>

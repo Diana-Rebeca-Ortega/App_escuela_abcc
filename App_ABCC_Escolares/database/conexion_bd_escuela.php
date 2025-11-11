@@ -2,9 +2,9 @@
     class ConexionBDEscuela{
         private $conexion;
         private $host = "localhost:3306";
-        private $usuario = "salvatore";
-        private $password = "salvatore";
-        private $bd = "BD_Escuela_Web_2025";
+        private $usuario = "dianita";
+        private $password = "dianita";
+        private $bd = "bd_escuela_web_2025";
         
         public function __construct(){
             $this->conexion = mysqli_connect($this->host, $this->usuario, $this->password,

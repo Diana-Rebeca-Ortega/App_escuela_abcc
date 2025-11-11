@@ -1,8 +1,7 @@
 <?php
-
-include_once('../database/conexion_bd_escuela.php')
+include_once('../App_ABCC_Escolares/database/conexion_bd_escuela.php');
  
-$con = new ConexioBDEscuela();
+$con = new ConexionBDEscuela();
 $conexion = $con->getConexion();
 
 if($_SERVER['REQUEST_METHOD']=='POST'){
@@ -31,8 +30,10 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
             $respuesta['alta'] = false;
 
         $respuestaJSON = json_encode($respuesta);
+        echo $respuestaJSON;
         //AQUI YA TENEMOS NUESTRA API 
     }
 }
 
 ?>
+
